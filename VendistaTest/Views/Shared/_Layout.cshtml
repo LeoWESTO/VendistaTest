@@ -1,0 +1,92 @@
+﻿!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Личный кабинет - @ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo_container">
+                <a asp-controller="Home" asp-action="Index">
+                    <img src="/img/logo.png" width="150" height="40" />
+                </a>
+            </div>
+            <div class="breadcrumb_container">
+                <span class="header_text">Личный кабинет - Отправка команды на терминал</span>
+            </div>
+            <div class="header_right">
+                <a href="#">
+                    <img src="/img/avatar.png" width="25" height="25" />
+                </a>
+                
+                <span class="header_text">Партнер</span>
+                <a href="#">
+                    <img src="/img/logout.png" width="25" height="25" />
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <aside>
+            <div class="aside_button_wrapper">
+                <a class="aside_button" href="#">
+                    <img src="/img/clients.png" width="25" height="25" />
+                    <span class="aside_text">Клиенты</span>
+                </a>
+            </div>
+            <div class="aside_button_wrapper">
+                <a class="aside_button" href="#">
+                    <img src="/img/users.png" width="25" height="25" />
+                    <span class="aside_text">Пользователи</span>
+                </a>
+            </div>
+            <div class="aside_button_wrapper">
+                <a class="aside_button" href="#">
+                    <img src="/img/terminals.png" width="25" height="25" />
+                    <span class="aside_text">Терминалы</span>
+                </a>
+            </div>
+            <div class="aside_button_wrapper">
+                <a class="aside_button" href="#">
+                    <img src="/img/tid.png" width="25" height="25" />
+                    <span class="aside_text">TID Банка</span>
+                </a>
+            </div>
+            <div class="aside_button_wrapper">
+                <a class="aside_button" href="#">
+                    <img src="/img/transactions.png" width="25" height="25" />
+                    <span class="aside_text">Транзакции</span>
+                </a>
+            </div>
+            <div class="aside_button_wrapper">
+                <a class="aside_button" href="#">
+                    <img src="/img/logs.png" width="25" height="25" />
+                    <span class="aside_text">Логи терминалов</span>
+                </a>
+            </div>
+            <div class="aside_button_wrapper">
+                <a class="aside_button" href="#">
+                    <img src="/img/cash.png" width="25" height="25" />
+                    <span class="aside_text">Кассы</span>
+                </a>
+            </div>
+            <div class="aside_button_wrapper">
+                <a class="aside_button" href="#">
+                    <img src="/img/terminals.png" width="25" height="25" />
+                    <img src="/img/clients.png" width="25" height="25" />
+                    <span class="aside_text">Привязать терминалы к клиенту списком</span>
+                </a>
+            </div>
+        </aside>
+        <main role="main">
+            @RenderBody()
+
+        </main>
+    </div>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

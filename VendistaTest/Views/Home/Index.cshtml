@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Отправка команды на терминал";
+}
+
+<div class="main_container">
+    <h5 id="main_container_title">Отправка команды на терминал</h5>
+    <div class="command_container">
+        <div class="command_container_row">
+            <div class="terminal_richbox_container">
+                <h5>ID Терминал(ов)</h5>
+                <textarea 
+                    rows="20" cols="40" 
+                    id="terminalIds" 
+                    type="number">
+                </textarea>
+            </div>
+            <div class="command_select_container">
+                <h5>Команда</h5>
+                <select id="commandsSelect">
+                </select>
+            </div>
+        </div>
+        <div class="parameters_container">
+        </div>
+        <div class="buttons_container">
+            <button class="button cancel_button" id="cancelBtn">Назад</button>
+            <button class="button submit_button" id="submitBtn">Отправить</button>
+        </div>
+    </div>
+    <div class="commands_table">
+        <table>
+            <thead>
+                <tr>
+                    <td>№</td>
+                    <td>Дата и время</td>
+                    <td>Команда</td>
+                    <td>Параметр 1</td>
+                    <td>Параметр 2</td>
+                    <td>Параметр 3</td>
+                    <td>Статус</td>
+                </tr>
+            </thead>
+            <tbody id="commands_tbody">
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script charset="utf-8" src="/js/home/index.js" asp-append-version="true"></script>
